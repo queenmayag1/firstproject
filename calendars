@@ -4,13 +4,17 @@ import calendar
 # To figure out what days that would be for each month,
 
 print ("Team meetings will be on:")
-for m in range(1,13):
+for m in range(1,13): #loops over all months 
+
+  
+  cal = calendar.monthcalendar(2021, m) 
   # returns an array of weeks that represent the month
-  cal = calendar.monthcalendar(2021, m)
-  # The first Friday has to be within the first two weeks
+ 
   weekone = cal[0]
-  weektwo = cal[1]
-   
+  weektwo = cal[1] 
+  
+  #first fridays week 1or2 
+  
   if weekone[calendar.FRIDAY] != 0:
     meetday = weekone[calendar.FRIDAY]
   else:
